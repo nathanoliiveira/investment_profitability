@@ -18,7 +18,7 @@ pip install pandas yfinance
 ## Como Funciona
 
 1. **Leitura da Carteira de Investimentos**  
-   O script começa lendo os ativos e valores da carteira a partir de um arquivo de texto (`carteira.txt`). Cada linha do arquivo contém o código da ação (ticker) e a quantidade de ações adquiridas, separados por um hífen (`-`).
+   O script começa lendo os ativos e valores da carteira a partir de um arquivo de texto (`carteira.txt`). Cada linha do arquivo contém o código da ação (ticker) e o valor investido nessa ação, separados por um hífen (`-`).
 
    Exemplo de conteúdo do arquivo `carteira.txt`:
    ```
@@ -33,7 +33,7 @@ pip install pandas yfinance
    O script utiliza a biblioteca `yfinance` para baixar as cotações históricas das ações e do índice IBOVESPA (`^BVSP`) entre as datas definidas no código. As cotações são organizadas em uma tabela para fácil manipulação.
 
 3. **Cálculo da Rentabilidade**  
-   A rentabilidade de cada ativo é calculada com base no preço inicial e final da ação dentro do período definido. A rentabilidade total da carteira é ponderada pela quantidade de ações de cada ativo.
+   A rentabilidade de cada ativo é calculada com base no preço inicial e final da ação dentro do período definido. A rentabilidade total da carteira é ponderada pelo valor investido nessa ação.
 
 4. **Comparação com o Índice IBOVESPA**  
    A rentabilidade da carteira é comparada com a rentabilidade do índice IBOVESPA, proporcionando uma visão clara sobre o desempenho relativo da carteira.
